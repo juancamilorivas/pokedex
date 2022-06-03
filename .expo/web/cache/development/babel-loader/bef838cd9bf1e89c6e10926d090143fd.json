@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var API_HOST = \"https://pokeapi.co/api/v2/\";","map":{"version":3,"sources":["/Users/juancamilorivasmolina/Desktop/PROYECTOS/pokedex/utils/constants.js"],"names":["API_HOST"],"mappings":"AAAA,OAAO,IAAMA,QAAQ,GAAG,4BAAjB","sourcesContent":["export const API_HOST = \"https://pokeapi.co/api/v2/\";\n"]},"metadata":{},"sourceType":"module"}
