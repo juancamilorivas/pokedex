@@ -31,7 +31,7 @@ export default function Pokedex() {
         });
       }
 
-      setPokemons([...pokemons, pokemonsArray]);
+      setPokemons([...pokemons, ...pokemonsArray]);
     } catch (error) {
       console.error(error);
     }
@@ -39,7 +39,7 @@ export default function Pokedex() {
 
   return (
     <SafeAreaView>
-    <PokemonList pokemons ={pokemons}/>
+    <PokemonList pokemons={pokemons}/>
     </SafeAreaView>
   );
 }
