@@ -7,8 +7,20 @@ import {
   Keyboard,
 } from "react-native";
 import React from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 export default function LoginForm() {
+  const formik = useFormik({
+    initialValues: initialValues(),
+    validationSchema: Yup.object(validationSchema()),
+    validateOnChange: false,
+    onSubmit: (formValue) => {
+      console.log("formulario enviado...");
+      console.log(formValue);
+    },
+  });
+
   return (
     <View>
       <Text style={styles.title}>Iniciar sesion</Text>
@@ -16,16 +28,37 @@ export default function LoginForm() {
         placeholder="Nombre del usuario"
         style={styles.input}
         autoCapitalize="none"
+        value={formik.values.username}
+        onChangeText={(text) => formik.setFieldValue("username", text)}
       />
-      <TextInput 
-      placeholder="Contraseña"
+      <TextInput
+        placeholder="Contraseña"
         style={styles.input}
         autoCapitalize="none"
         secureTextEntry={true}
+        value={formik.values.password}
+        onChangeText={(text) => formik.setFieldValue("password", text)}
       />
-      <Button title="Entrar" onPress={() => console.log("Entrando")} />
+      <Button title="Entrar" onPress={formik.handleSubmit} />
+
+      <Text style={styles.error}>{formik.errors.username}</Text>
+      <Text style={styles.error}>{formik.errors.password}</Text>
     </View>
   );
+}
+
+function initialValues() {
+  return {
+    username: "",
+    password: "",
+  };
+}
+
+function validationSchema () {
+    return {
+        username: Yup.string().required("El nombre de usuario es requerido"),
+        password: Yup.string().required("La contraseña es requerida")
+    }
 }
 
 const styles = StyleSheet.create({
@@ -43,4 +76,9 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
   },
+  error: {
+    textAlign: "center",
+    color: "#f00",
+    marginTop: 20,
+  }
 });
