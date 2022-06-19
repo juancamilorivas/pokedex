@@ -4,8 +4,8 @@ export const user = {
 };
 
 export const userDetails = {
-  username: "xcamilo54",
-  firstname: "Juan Camilo",
-  Lastname: "Rivas Molina",
+  userName: "xcamilo54",
+  firstName: "Juan Camilo",
+  lastName: "Rivas Molina",
   email: "bogota.diamond@hotmail.com",
 };
