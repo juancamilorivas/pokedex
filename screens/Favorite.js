@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Favorite() {
 
-const checkFavorite = async () => {
+const checkFavorites = async () => {
  const response = await getPokemonsFavoriteApi();
  console.log(response);
 }
@@ -13,7 +13,7 @@ const checkFavorite = async () => {
   return (
     <SafeAreaView>
       <Text>Favorite</Text>
-      <Button title='Obtener favoritos' onPress={checkFavorite}/>
+      <Button title='Obtener favoritos' onPress={checkFavorites}/>
     </SafeAreaView>
   )
 }

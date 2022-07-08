@@ -22,4 +22,11 @@ export async function addPokemonFavoriteApi(id) {
   }
 }
 
-////quede en minuto 6:13 de la clase 9
+export async function isPokemonFavoriteApi(id) {
+  try {
+    const response = await getPokemonsFavoriteApi()
+    return includes(response, id)
+  } catch (error) {
+    throw error;
+  }
+}
