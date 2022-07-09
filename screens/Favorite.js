@@ -5,6 +5,7 @@ import { getPokemonsFavoriteApi } from "../api/favorite";
 import { getPokemonDetailsApi } from "../api/pokemon";
 import useAuth from "../hooks/useAuth";
 import PokemonList from "../components/PokemonList";
+import NoLogged from '../components/NoLogged';
 
 export default function Favorite() {
   const [pokemons, setPokemons] = useState([]);
@@ -39,7 +40,7 @@ useFocusEffect(
   
 
   return !auth ? (
-    <Text>Usuario no logueado</Text>
+    <NoLogged />
   ) : (
     <PokemonList pokemons={pokemons} />
   );
