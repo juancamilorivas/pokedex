@@ -1,4 +1,5 @@
-![pokedex](https://user-images.githubusercontent.com/67404147/180518951-0e5570a0-dcc7-4697-888f-1a9f1e8ededf.png)
+![Diseño sin título (6)](https://user-images.githubusercontent.com/67404147/180523045-f1f736e8-a00e-4c6e-8689-e376e7e0de4d.png)
+
 
 
 
