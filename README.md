@@ -19,7 +19,7 @@ To start the development server and run app on simulator or device
 #### `yarn ios`
 
 To log in, use the following credentials:  
-**Username:** bgamas  
-**Password:** test1234
+**Username:** camilo  
+**Password:** 12345
 
 ## Core dependencies
